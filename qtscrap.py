@@ -6,8 +6,6 @@ from BeautifulSoup import BeautifulSoup
 import re 
 from HTMLParser import HTMLParser
 import urllib2
-
-
   
 class Render(QWebPage):  
   def __init__(self, url):
@@ -35,8 +33,7 @@ for i in range(1, len(list)):
                 list[i] = "http://ahmedabad.yellowpages.co.in/" + list[i]
                 print list[i]
                 url = list[i]  
-		# Create a Qt application
-		r = Render(url)  
+		r = Render(url) #QApplication instance created in this  
 		html = r.frame.toHtml()  
 		soup = BeautifulSoup(html)
 		data = soup.findAll("span" ,{"class":"jqOfcEmail"})
