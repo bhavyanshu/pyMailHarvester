@@ -1,3 +1,5 @@
+#Example for harvesting emails from yellowpages website. The website has deployed protection for emails using javascript. But this code overcomes that.
+
 import sys
 from PySide.QtGui import *
 from PySide.QtCore import *
